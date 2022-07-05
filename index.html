@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlpineJS widgets for Bootcamp functions</title>
+    <script src="greet-widget.js" defer></script>
+    <script src="greet.js"></script>
+    <script src="enoughAirtime-widget.js" defer></script>
+    <script src="enough-airtime.js"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        //console.log(greet("Josephine"));
+    </script>
+</head>
+
+<body>
+<h1>My Bootcamp AlpineJS widgets</h1>
+
+    <div class="widgets">
+
+        <div class="widget-Disp" x-data="greetWidget">
+
+            <h2>Greet Widget</h2>
+            <div x-show="theMessage.length > 0" class="message" x-text="theMessage">
+                Please feel at home...
+            </div>
+
+            <label for="name">Please enter your name:</label>
+            <input type="text" x-model="theName" id="name" placeholder="enter name">
+            <button x-on:click="greetMe">Greet!</button>
+        </div>
+
+        <div class="widget-Disp" x-data="enoughAirtimeWidget">
+            <h2>Enough airtime</h2>
+
+            <div class="airtime">
+                <label for="usage">Please enter your airtime usage</label>
+                <input type="text" x-model="airtimeUsage" id="usage">
+            </div>
+
+            <div class="airtime">
+                <label for="amount">Amount available</label>
+                <input type="text" x-model="availableAmount" id="amount">
+            </div>
+
+            <div class="message" x-text="airtimeMessage">
+
+            </div>
+
+            <div>
+                <button x-on:click="calculate">Calculate airtime usage</button>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
