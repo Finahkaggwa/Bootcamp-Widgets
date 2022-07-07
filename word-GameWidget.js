@@ -8,14 +8,16 @@ document.addEventListener('alpine:init', () => {
      this.longestMessage = longestWord(this.theSentence);
      setTimeout(() => {
         this.longestMessage = '';
-        }, 4000);
+        this.theSentence = '';
+        }, 6000);
      },
      shortestMessage: '',
      shortW(){
         this.shortestMessage = shortestWord(this.theSentence);
         setTimeout(() => {
            this.shortestMessage = '';
-           }, 4000);
+           this.theSentence = '';
+           }, 6000);
         },
 
         sentenceCount: '',
@@ -23,7 +25,8 @@ document.addEventListener('alpine:init', () => {
             this.sentenceCount = wordLengths(this.theSentence);
             setTimeout(() => {
                this.sentenceCount = '';
-               }, 4000);
+               this.theSentence = '';
+               }, 6000);
             },
         }
     })

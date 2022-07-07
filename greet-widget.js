@@ -8,6 +8,7 @@ document.addEventListener('alpine:init', () => {
                 this.theMessage = greet(this.theName);
                 setTimeout(() => {
                     this.theMessage = '';
+                    this.theName = '';
                 }, 3000)
             }
         }

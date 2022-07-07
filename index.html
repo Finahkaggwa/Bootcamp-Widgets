@@ -44,7 +44,7 @@
 
             <div class="airtime">
                 <label for="usage">Please enter your airtime usage:</label>
-                <input type="text" x-model="airtimeUsage" id="usage">
+                <input type="text" x-model="airtimeUsage" id="usage" placeholder="call,sms,data">
             </div>
 
             <div class="airtime">
@@ -80,7 +80,7 @@
 
             <div class="intext2">
                 <label for="longestWord">Enter the sentence here:</label>
-                <input type="text" x-model="theSentence" id="longestWord" placeholder="sentence">
+                <input type="text" x-model="theSentence" id="longestWord" placeholder="within this space">
             </div>
             <div x-show="longestMessage.length > 0" class="message" x-text="longestMessage"></div>
             <button class="click2" x-on:click="longW">Longest word</button>
@@ -88,14 +88,14 @@
 
             <div class="intext2">
                 <label for="shortestWord">Enter the sentence here:</label>
-                <input type="text" x-model="theSentence" id="longestWord" placeholder="sentence">
+                <input type="text" x-model="theSentence" id="longestWord">
             </div>
             <div class="message" x-text="shortestMessage" x-show="shortestMessage.length > 0"></div>
             <button class="click2" x-on:click="shortW">Shortest word</button>
 
             <div class="intext2">
                 <label for="wordLengths">Enter the sentence here:</label>
-                <input type="text" x-model="theSentence" id="wordLengths" placeholder="sentence">
+                <input type="text" x-model="theSentence" id="wordLengths">
             </div>
             <div class="message" x-text="sentenceCount" x-show="sentenceCount > 0"></div>
             <button class="click" x-on:click="wordCount">Word lengths</button>

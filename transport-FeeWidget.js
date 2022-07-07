@@ -12,6 +12,7 @@ document.addEventListener('alpine:init', () => {
       
                 setTimeout(() => {
                   this.theFeeMessage = '';
+                  this.theShift = '';
                   }, 7000);
               }
         }
