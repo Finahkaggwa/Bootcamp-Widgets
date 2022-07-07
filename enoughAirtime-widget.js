@@ -9,7 +9,7 @@ document.addEventListener('alpine:init', () => {
               this.airtimeMessage = result;
 
               setTimeout(() => {
-                this.airtimeMessage = 'That was your balance...';
+                this.airtimeMessage = 'That is your balance.';
             }, 5000)
 
             }

@@ -2,18 +2,62 @@ body {
     background-color: #ccd5ae;
     font-family: Arial, Helvetica, sans-serif;
 }
-h1{
+
+h1 {
     text-align: center;
 }
+
 .message {
     background-color: #fefae0;
     padding: 1em;
     margin-bottom: 1em;
 }
 
+.click {
+    background-color: #faedcd;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.click2 {
+    background-color: #faedcd;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    margin-bottom: 2em;
+}
+
+.intext>label {
+    display: inline-block;
+    width: 12em;
+    padding: 0.5em;
+    font-weight: bold;
+}
+
+.intext>input[type="text"] {
+    padding: 0.5em;
+    margin: 0.5em;
+    margin-right: 1.5em;
+}
+
+.intext2>label {
+    display: inline-block;
+    width: 12em;
+    padding: 0.5em;
+    font-weight: bold;
+}
+
+.intext2>input[type="text"] {
+    padding: 0.5em;
+    margin: 0.5em;
+    margin-right: 1.5em;
+    width: 25em;
+}
+
 .airtime>label {
     display: inline-block;
-    width: 15em;
+    width: 16em;
     padding: 0.5em;
     font-weight: bold;
 }
@@ -33,4 +77,8 @@ h1{
     margin: 1em;
     padding: 1em;
     border-radius: 00.5em;
+}
+
+.widgets2 {
+    display: flex;
 }

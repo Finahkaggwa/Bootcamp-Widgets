@@ -10,6 +10,10 @@
     <script src="greet.js"></script>
     <script src="enoughAirtime-widget.js" defer></script>
     <script src="enough-airtime.js"></script>
+    <script src="transport-FeeWidget.js" defer></script>
+    <script src="transport-fee.js"></script>
+    <script src="word-GameWidget.js" defer></script>
+    <script src="word-game.js"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
     <link rel="stylesheet" href="style.css">
     <script>
@@ -18,7 +22,7 @@
 </head>
 
 <body>
-<h1>My Bootcamp AlpineJS widgets</h1>
+    <h1>My Bootcamp AlpineJS widgets</h1>
 
     <div class="widgets">
 
@@ -28,32 +32,73 @@
             <div x-show="theMessage.length > 0" class="message" x-text="theMessage">
                 Please feel at home...
             </div>
-
-            <label for="name">Please enter your name:</label>
-            <input type="text" x-model="theName" id="name" placeholder="enter name">
-            <button x-on:click="greetMe">Greet!</button>
+            <span class="intext">
+                <label for="name">Please enter your name:</label>
+                <input type="text" x-model="theName" id="name" placeholder="enter name">
+            </span>
+            <button class="click" x-on:click="greetMe">Greet!</button>
         </div>
 
         <div class="widget-Disp" x-data="enoughAirtimeWidget">
-            <h2>Enough airtime</h2>
+            <h2>Enough Airtime</h2>
 
             <div class="airtime">
-                <label for="usage">Please enter your airtime usage</label>
+                <label for="usage">Please enter your airtime usage:</label>
                 <input type="text" x-model="airtimeUsage" id="usage">
             </div>
 
             <div class="airtime">
-                <label for="amount">Amount available</label>
+                <label for="amount">Amount available:</label>
                 <input type="text" x-model="availableAmount" id="amount">
             </div>
 
-            <div class="message" x-text="airtimeMessage">
-
-            </div>
+            <div class="message" x-text="airtimeMessage"></div>
 
             <div>
-                <button x-on:click="calculate">Calculate airtime usage</button>
+                <button class="click" x-on:click="calculate">Calculate airtime usage</button>
             </div>
+        </div>
+    </div>
+
+    <div class="widgets2">
+
+
+        <div class="widget-Disp" x-data="transportWidget">
+            <h2>Transport Fee</h2>
+
+            <span class="intext">
+                <label for="shift">Please enter your shift:</label>
+                <input type="text" x-model="theShift" id="shift">
+            </span>
+            <div x-show="theFeeMessage.length > 0" class="message" x-text="theFeeMessage"></div>
+            <button class="click" x-on:click="shiftFee">Transport fee for shift</button>
+
+        </div>
+
+        <div class="widget-Disp" x-data="wordGameWidget">
+            <h2>Word Game</h2>
+
+            <div class="intext2">
+                <label for="longestWord">Enter the sentence here:</label>
+                <input type="text" x-model="theSentence" id="longestWord" placeholder="sentence">
+            </div>
+            <div x-show="longestMessage.length > 0" class="message" x-text="longestMessage"></div>
+            <button class="click2" x-on:click="longW">Longest word</button>
+
+
+            <div class="intext2">
+                <label for="shortestWord">Enter the sentence here:</label>
+                <input type="text" x-model="theSentence" id="longestWord" placeholder="sentence">
+            </div>
+            <div class="message" x-text="shortestMessage" x-show="shortestMessage.length > 0"></div>
+            <button class="click2" x-on:click="shortW">Shortest word</button>
+
+            <div class="intext2">
+                <label for="wordLengths">Enter the sentence here:</label>
+                <input type="text" x-model="theSentence" id="wordLengths" placeholder="sentence">
+            </div>
+            <div class="message" x-text="sentenceCount" x-show="sentenceCount > 0"></div>
+            <button class="click" x-on:click="wordCount">Word lengths</button>
 
         </div>
 
